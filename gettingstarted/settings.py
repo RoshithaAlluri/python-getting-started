@@ -56,7 +56,7 @@ if IS_HEROKU_APP:
     # validation of the Host header in the incoming HTTP request. On other platforms you may need to
     # list the expected hostnames explicitly in production to prevent HTTP Host header attacks. See:
     # https://docs.djangoproject.com/en/5.2/ref/settings/#std-setting-ALLOWED_HOSTS
-    ALLOWED_HOSTS = ["*"]
+    ALLOWED_HOSTS = ['*']
 
     # Redirect all non-HTTPS requests to HTTPS. This requires that:
     # 1. Your app has a TLS/SSL certificate, which all `*.herokuapp.com` domains do by default.
@@ -194,7 +194,7 @@ USE_TZ = True
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "static/"
-
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 STORAGES = {
     # Enable WhiteNoise's GZip (and Brotli, if installed) compression of static assets:
     # https://whitenoise.readthedocs.io/en/latest/django.html#add-compression-and-caching-support
